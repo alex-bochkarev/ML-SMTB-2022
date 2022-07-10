@@ -1,3 +1,6 @@
 README.md.temp
 .venv
 .ipynb_checkpoints
+MNIST/
+CHD-data.csv
+runs/
