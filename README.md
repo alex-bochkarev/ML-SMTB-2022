@@ -29,16 +29,35 @@
 ### ② Логистическая регрессия
 Что делать, если нужно предсказать факт (вопрос на "да / нет")?
 
-- 📝 **практика:** сердечные заболевания.
+- 📝 **практика:** риски сердечных заболеваний, Framingham Risk Score.
+- 📓 **jupyter notebook:** `T2-logistic-reg.ipynb` [(GitHub)](https://github.com/alex-bochkarev/ML-SMTB-2022/blob/main/T2-logistic-reg.ipynb) [(nbviewer)](https://nbviewer.jupyter.org/github/alex-bochkarev/ML-SMTB-2022/blob/main/T2-logistic-reg.ipynb) [(colab)](https://colab.research.google.com/github/alex-bochkarev/ML-SMTB-2022/blob/main/T2-logistic-reg.ipynb)
+- 💾 **данные:** [CHD-data.csv](./CHD-data.csv) --- см., например, [Kaggle](https://www.kaggle.com/datasets/5d359d0259d8325396aff882594f0c59e5e0c3da49c5bf4df3c23121109b4955)
 
-### ③ Нейросеть
-Нелинейные взаимосвязи. Нейросеть -- пример на пяти узлах.
 
-- 📝 **практика:** распознавание рукописного текста (с помощью <strike>скотча, старых тряпок, и</strike> `numpy`).
+### ③ Нейросеть (два занятия)
+Нелинейные взаимосвязи. Нейросеть -- пример на трех узлах.
+
+- 📝 **практика:** распознавание рукописного текста (с помощью <strike>скотча, старых тряпок, и</strike> `torch`).
+
+- 📓 **jupyter notebooks:** 
+
+  - Простая нейросеть: `T3-NN.ipynb` [(GitHub)](https://github.com/alex-bochkarev/ML-SMTB-2022/blob/main/T3-NN.ipynb) [(nbviewer)](https://nbviewer.jupyter.org/github/alex-bochkarev/ML-SMTB-2022/blob/main/T3-NN.ipynb) [(colab)](https://colab.research.google.com/github/alex-bochkarev/ML-SMTB-2022/blob/main/T3-NN.ipynb)
+  - Рукописный текст / MNIST dataset: `T4-NN-MNIST.ipynb` [(GitHub)](https://github.com/alex-bochkarev/ML-SMTB-2022/blob/main/T4-NN-MNIST.ipynb) [(nbviewer)](https://nbviewer.jupyter.org/github/alex-bochkarev/ML-SMTB-2022/blob/main/T4-NN-MNIST.ipynb) [(colab)](https://colab.research.google.com/github/alex-bochkarev/ML-SMTB-2022/blob/main/T4-NN-MNIST.ipynb)
+- 💾 **данные:** мы скачали автоматически с помощью PyTorch (`torchvision`).
 
 ## 👓 Что еще почитать?
-Здесь будем собирать ссылки на книги / курсы / другие источники, которые нам покажутся полезными.
+Очень, очень широкая тема. Чтобы я тут не написал, будет мало 🤷. Но я попробую субъективно выделить, например:
 
-- Gilbert Strang, Linear Algebra: [MiT OCW Course](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/)
-- *может быть* лекции МФТИ: [поиск в YouTube](https://www.youtube.com/results?search_query=%D0%BB%D0%B8%D0%BD%D0%B5%D0%B9%D0%BD%D0%B0%D1%8F+%D0%B0%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0+%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8+%D0%BC%D1%84%D1%82%D0%B8+)
-- курс [Analytics Edge](https://www.edx.org/course/the-analytics-edge) на EdX (см. также книгу The Analytics Edge by Bertsimas, O'Hair, and Pulleyblank)
+- По Линейной Алгебре (Linear Algebra):
+  - Gilbert Strang, Linear Algebra: [MiT OCW Course](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/)
+  - *может быть* лекции МФТИ: [поиск в YouTube](https://www.youtube.com/results?search_query=%D0%BB%D0%B8%D0%BD%D0%B5%D0%B9%D0%BD%D0%B0%D1%8F+%D0%B0%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0+%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8+%D0%BC%D1%84%D1%82%D0%B8+)
+  
+- Про теорвер, можно посмотреть например ссылки к моему прошлогоднему курсу [тут](https://github.com/alex-bochkarev/zpsh-21-probs). Но вообще можно попробовать смотреть разные курсы (coursera / EdX / stepik / etc) и читать разные книжки, чтобы посмотреть, что зайдет именно вам.
+
+- В целом про аналитику, мне очень понравился курс [Analytics Edge](https://www.edx.org/course/the-analytics-edge) на EdX (см. также книгу The Analytics Edge by Bertsimas, O'Hair, and Pulleyblank). Там достаточно коротко и понятно описаны примеры про вино и про Framingham Risc Score (и есть много других!)
+
+- В обсуждении возникла пару ссылок на курсы по мат. анализу (спасибо, Alexey Matyash!):
+  - [красивый](https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)
+  - [подробный](https://www.khanacademy.org/math/ap-calculus-ab)
+  
+- Наконец, про ML в целом. Я очень рекомендую вдумчиво почитать на эту тему отзывы и обсуждения на Reddit, Quora и т.п. и посмотреть, что понравится именно вам. Мне понравились некоторые курсы на Coursera / EdX, но, к сожалению, сейчас доступны не все. Можно попробовать начать с классики, Andrew Ng ([Coursera](https://www.coursera.org/specializations/machine-learning-introduction?) или даже [CS229](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)). В целом, всякие сертификаты, с моей точки зрения, достаточно бесполезны; а вот любые проекты (когда вы сами делаете что-то осмылсенное, даже если очень простое) -- это очень здорово. Добавляет много понимания и даже код на Github, который можно потом кому-то показать.
