@@ -1,0 +1,105 @@
+#+TITLE: [SMTB-2022 course] How to teach 🤖 machines: simple ML examples.
+
+- This =README= is also available [[file:README_RUS.md][in Russian]] (original version).
+- Teaching materials online: [[https://github.com/alex-bochkarev/ML-SMTB-2022][Gitub repo]] (or the SMTB course folder).
+- Discord: =co05-как-учить-машины-простые-примеры-про-ml=
+
+*Status:* SMTB-2022 track is over! I am always interested to improve the course
+for the next season (and it is better to do in advance), so any comments /
+questions / suggestions are *very* welcome. Feel free to drop me an [[https://www.bochkarev.io/contact][email]] any
+time.
+
+* [ 𝚺 ] Summary
+*Course point:* Machine learning methods (ML) have in a wide variety of
+applications: recognition of faces and car license plates, recommending movies
+and books, prediction of accident probabilities or optimal protein folding
+structure, the list goes on. (See a separate SMTB course on that protein folding
+thing!)
+
+In this course we will try to look at simple examples and figure how do some
+fundamental ML models work. In particular, we will consider things that take
+some data as inputs and:
+- predict a specific *number* -- which will be [[https://en.wikipedia.org/wiki/Linear_regression]["Linear Regression"]];
+- predict "likelihood" of a *'yes' answer* to a yes-or-no question -- which will be [[https://en.wikipedia.org/wiki/Logistic_regression]["Logistic Regression"]];
+- predict... what *kind of thing* is the input (as in recognizing images) -- which will be a [[https://en.wikipedia.org/wiki/Neural_network]["Neural Network"]].
+
+For each of these cases, we will do two things. First, consider an
+very simplified model to try and build an intuitive understanding of how does
+it work. Second, we will build a small, but practically reasonable model of that
+type, for some sort of realistic setting.
+
+*The main goal* of the course is to build some sort of confidence and
+encourage students to dive deeper into the topic, if / when it will be
+necessary.
+
+*Timeframe:* Four classes, 50 minutes each. No mandatory home assignments.
+
+*Prerequisites:* Working knowledge of high-school math (calculating
+"Derivatives" and the "Chain rule") would help, but is not strictly necessary.
+We will try to discuss the intuition behind the required concepts and terms.
+Examples will be implemented in Python, but programming skills are not really
+required. Desire to read the existing code would be enough.
+
+*Tech needed:* having a working python installation locally along with Jupyter
+Notebook will help. However, you will be just OK using Google Colab (in which
+case you will need just a web browser and a free Google account). I also provide
+links to pre-rendered notebooks (nbviewer), so that one could review them
+briefly without running the whole Jupyter.
+
+* [ ☰ ] Course outline
+The course comprises three topics, corresponding to the three types of models.
+(The list is not exhaustive, of course; these are just illustrations for some
+fundamental models)
+
+** Topic ① Linear Regression
+Predicting the linear relations.
+- 📝 *practice:* experts and models, wine prices.
+- 📓 *jupyter notebook:* =T1-linear-reg.ipynb= [[https://github.com/alex-bochkarev/ML-SMTB-2022/blob/main/T1-linear-reg.ipynb][(GitHub)]] [[https://nbviewer.jupyter.org/github/alex-bochkarev/ML-SMTB-2022/blob/main/T1-linear-reg.ipynb][(nbviewer)]] [[https://colab.research.google.com/github/alex-bochkarev/ML-SMTB-2022/blob/main/T1-linear-reg.ipynb][(colab)]]
+- 💾 *data:* [[./wine-data.csv][wine-data.csv]]
+
+** Topic ② Logistic Regression
+Now: what to do if we want to predict a /yes-or-no/ answer?
+- 📝 *practice:* coronary heart diseases and Framingham Risk Score.
+- 📓 **jupyter notebook:** =T2-logistic-reg.ipynb= [[https://github.com/alex-bochkarev/ML-SMTB-2022/blob/main/T2-logistic-reg.ipynb][(GitHub)]] [[https://nbviewer.jupyter.org/github/alex-bochkarev/ML-SMTB-2022/blob/main/T2-logistic-reg.ipynb][(nbviewer)]] [[https://colab.research.google.com/github/alex-bochkarev/ML-SMTB-2022/blob/main/T2-logistic-reg.ipynb][(colab)]]
+- 💾 *data:* [[./CHD-data.csv][CHD-data.csv]] -- see, e.g., [[https://www.kaggle.com/datasets/5d359d0259d8325396aff882594f0c59e5e0c3da49c5bf4df3c23121109b4955][Kaggle]].
+
+
+** Topic ③ Neural Network (two sessions)
+Non-linear relations and logits stacked one upon another -- a three-node example.
+- 📝 *practice:* handwriting recognition (with +sticky tape+  =numpy= and =torch=).
+- 📓 *jupyter notebooks:*
+  + A simple neural network: =T3-NN.ipynb= [[https://github.com/alex-bochkarev/ML-SMTB-2022/blob/main/T3-NN.ipynb][(GitHub)]] [[https://nbviewer.jupyter.org/github/alex-bochkarev/ML-SMTB-2022/blob/main/T3-NN.ipynb][(nbviewer)]] [[https://colab.research.google.com/github/alex-bochkarev/ML-SMTB-2022/blob/main/T3-NN.ipynb][(colab)]]
+  + Handwriting / recognition with MNIST dataset: =T4-NN-MNIST.ipynb= [[https://github.com/alex-bochkarev/ML-SMTB-2022/blob/main/T4-NN-MNIST.ipynb][(GitHub)]] [[https://nbviewer.jupyter.org/github/alex-bochkarev/ML-SMTB-2022/blob/main/T4-NN-MNIST.ipynb][(nbviewer)]] [[https://colab.research.google.com/github/alex-bochkarev/ML-SMTB-2022/blob/main/T4-NN-MNIST.ipynb][(colab)]]
+- 💾 *data:* downloaded automatically with =PyTorch= (we will need =torchvision=).
+
+* [ 👓 ] Further reading.
+The topic is way, way too broad. Whatever we have here, it wouldn't be enough
+🤷. But let us try to highlight a few things that I (very subjectively) like:
+
+- *Linear Algebra:*
+  - Gilbert Strang, Linear Algebra: [[https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/][MiT OCW Course]]
+  - *maybe* MiPT [[https://www.youtube.com/results?search_query=%D0%BB%D0%B8%D0%BD%D0%B5%D0%B9%D0%BD%D0%B0%D1%8F+%D0%B0%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0+%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8+%D0%BC%D1%84%D1%82%D0%B8+][lectures]] (that's a YouTube search).
+
+- *Probabilities and Co.* -- there are a few links from my previous-year intro
+  [[https://github.com/alex-bochkarev/Probs-SMTB-21][course]] (make sure to check out the [[https://seeing-theory.brown.edu/][wonderful numerical illustration!]]). Perhaps
+  I would recommend to try different courses (Coursera / EdX / stepik / etc) and
+  perhaps different books and see what works for you.
+
+- In general about *"Analytics"*, I liked [[https://www.edx.org/course/the-analytics-edge][The Analytics Edge]] EdX-course a lot
+  (see also a book with the same title, by Bertsimas, O'Hair, and Pulleyblank).
+  Examples about the wine and Framingham Risc Score (and a few pretty cool
+  others!) are described there.
+
+- Also a few links on *Calculus* came up in a discussion (thanks, Alexey Matyash!):
+  - [[https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr][a really beautiful one]]
+  - [[https://www.khanacademy.org/math/ap-calculus-ab][a more detailed one]]
+
+- Finally, on *ML in general*. I would recommend to check out the numerous
+  discussions on "what to read" on Reddit, Quora, and so on, and check out what
+  works for you best. I liked a few courses on Coursera / EdX, but unfortunately
+  not all of them are available these days. One could try to start with the
+  classic by Andrew Ng on [[https://www.coursera.org/specializations/machine-learning-introduction][Coursera]], or even [[https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU][CS229]]. In general, in my opinion,
+  various "certificates" are more or less useless, unlike the practical
+  experience / projects you try to do during these courses. Practice (even if
+  these are relatively simple projects) does add understanding and, actually,
+  some code on Github one can demonstrate just in case.
